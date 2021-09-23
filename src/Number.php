@@ -152,9 +152,9 @@ if (!class_exists('nguyenanhung\Libraries\Number\Number')) {
          *
          * @see    http://www.php.net/manual/en/language.types.float.php  man page on float type
          */
-        public static function almostEqual($a, $b, $epsilon = 0.00001)
+        public static function almostEqual($a, $b, $epsilon = 0.00001): bool
         {
-            $isEqual = false;
+            //$isEqual = false;
 
             // if $a, $b, and $epsilon are not empty
             if ($a !== null && $b !== null && $epsilon !== null) {
@@ -310,7 +310,7 @@ if (!class_exists('nguyenanhung\Libraries\Number\Number')) {
          */
         public static function ceilTo($number, $multiple = 1)
         {
-            $ceiled = false;
+            //$ceiled = false;
 
             // if $number and $multiple are passed
             // keep in mind, PHP's empty() will return true on zero
@@ -375,7 +375,7 @@ if (!class_exists('nguyenanhung\Libraries\Number\Number')) {
          */
         public static function floorTo($number, $multiple = 1)
         {
-            $floored = false;
+            //$floored = false;
 
             // if $number and $multiple are not null
             if ($number !== null && $multiple !== null) {
@@ -418,7 +418,7 @@ if (!class_exists('nguyenanhung\Libraries\Number\Number')) {
          *
          * @see    \nguyenanhung\Libraries\Number\Number::isInt()
          */
-        public static function is_int($number)
+        public static function is_int($number): bool
         {
             return self::isInt($number);
         }
@@ -430,7 +430,7 @@ if (!class_exists('nguyenanhung\Libraries\Number\Number')) {
          *
          * @see    \nguyenanhung\Libraries\Number\Number::isNumeric()
          */
-        public static function is_numeric($number)
+        public static function is_numeric($number): bool
         {
             return self::isNumeric($number);
         }
@@ -461,7 +461,7 @@ if (!class_exists('nguyenanhung\Libraries\Number\Number')) {
          * @throws  InvalidArgumentException  if $datatype is not a string
          * @throws  InvalidArgumentException  if $datatype is not an allowed value
          */
-        public static function isId($number, $datatype = 'int')
+        public static function isId($number, string $datatype = 'int'): bool
         {
             $isId = false;
 
@@ -544,7 +544,7 @@ if (!class_exists('nguyenanhung\Libraries\Number\Number')) {
          *
          * @return  bool  true if $number is an integer or integer string
          */
-        public static function isInt($number)
+        public static function isInt($number): bool
         {
             return is_numeric($number) && is_int(+$number);
         }
@@ -580,7 +580,7 @@ if (!class_exists('nguyenanhung\Libraries\Number\Number')) {
          * @return  bool  true if $number is a number
          *
          */
-        public static function isNumeric($number)
+        public static function isNumeric($number): bool
         {
             return is_numeric($number)
                    || (is_string($number) && preg_match(self::REGEX_NUMBER_MIXED, $number))
@@ -614,7 +614,7 @@ if (!class_exists('nguyenanhung\Libraries\Number\Number')) {
          *
          * @return  bool  true if $number is zero
          */
-        public static function isZero($number)
+        public static function isZero($number): bool
         {
             return $number === 0
                    || $number === 0.0
@@ -656,7 +656,7 @@ if (!class_exists('nguyenanhung\Libraries\Number\Number')) {
          */
         public static function normalize($number, $max)
         {
-            $norm = false;
+            //$norm = false;
 
             // if $number and $max are given
             if ($number !== null && $max !== null) {
@@ -714,7 +714,7 @@ if (!class_exists('nguyenanhung\Libraries\Number\Number')) {
          */
         public static function roundTo($number, $multiple = 1)
         {
-            $round = false;
+            //$round = false;
 
             // if $number and $multiple exist
             if ($number !== null && $multiple !== null) {

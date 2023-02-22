@@ -21,14 +21,12 @@
     "require": {
         "php": ">=7.0",
         "ext-json": "*",
-        "ext-mbstring": "*"
+        "ext-mbstring": "*",
+        "nguyenanhung/array-helper": "^2.0 || ^1.0"
     },
     "autoload": {
         "psr-4": {
             "nguyenanhung\\Libraries\\Number\\": "src/"
-        },
-        "files": [
-            "helpers/helpers.php"
-        ]
+        }
     }
 }

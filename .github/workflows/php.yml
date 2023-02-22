@@ -5,12 +5,12 @@ jobs:
     build:
         strategy:
             matrix:
-                operating-system: [ ubuntu-latest, windows-latest, macos-latest ]
+                operating-system: [ ubuntu-latest, macos-latest ]
                 php-versions: [ '5.6', '7.0', '8.0' ]
         runs-on: ${{ matrix.operating-system }}
         steps:
             -   name: Checkout
-                uses: actions/checkout@v2
+                uses: actions/checkout@v3
             -   name: Setup PHP, with composer and extensions
                 uses: shivammathur/setup-php@v2 # From https://github.com/shivammathur/setup-php
                 with:

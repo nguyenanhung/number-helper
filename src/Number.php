@@ -437,7 +437,7 @@ if (!class_exists('nguyenanhung\Libraries\Number\Number')) {
                     // if the number is a positive integer
                     if (is_numeric($number) && self::isInt($number) && $number > 0) {
                         // if the number is LTE the datatype's max value
-                        switch (strtolower($datatype)) {
+                        switch (mb_strtolower($datatype)) {
                             case 'tiny':
                             case 'tinyint':
                                 $isId = ($number <= 255);
@@ -780,8 +780,8 @@ if (!class_exists('nguyenanhung\Libraries\Number\Number')) {
                         $value = +str_replace(',', '', $var);
                     } elseif (preg_match(self::REGEX_NUMBER_MIXED, $var, $m)) {
                         $value = $m[2] + $m[3] / $m[4];
-                    } elseif (is_numeric($var[0]) && in_array(substr($var, -2), self::$suffixes, true)) {
-                        $value = substr($var, 0, -2);
+                    } elseif (is_numeric($var[0]) && in_array(mb_substr($var, -2), self::$suffixes, true)) {
+                        $value = mb_substr($var, 0, -2);
                     } else {
                         // if the string is composed *only* of valid number names
                         //
@@ -789,14 +789,14 @@ if (!class_exists('nguyenanhung\Libraries\Number\Number')) {
                         // then, explode on space, trim, and filter out empty values
                         // finally, merge all the possible numeric string values together
                         //
-                        $words = strtolower($var);
+                        $words = mb_strtolower($var);
                         $words = str_ireplace(',', '', $words);
                         $words = str_ireplace(array('-', ' and '), ' ', $words);
                         $words = array_filter(array_map('trim', explode(' ', $words)));
                         $names = array_merge(array_keys(self::$cardinals), array_keys(self::$ordinals), array_keys(self::$powers));
                         if (count(array_diff($words, $names)) === 0) {
                             // replace the words with their numeric values
-                            $var = strtr(strtolower($var), array_merge(self::$cardinals, self::$ordinals, self::$powers, array('and' => '')));
+                            $var = strtr(mb_strtolower($var), array_merge(self::$cardinals, self::$ordinals, self::$powers, array('and' => '')));
                             // convert the numeric values to integers
                             $parts = array_map(static function($val) {
                                 return (int) $val;

@@ -1,4 +1,9 @@
-[![Latest Stable Version](http://poser.pugx.org/nguyenanhung/number-helper/v)](https://packagist.org/packages/nguyenanhung/number-helper) [![Total Downloads](http://poser.pugx.org/nguyenanhung/number-helper/downloads)](https://packagist.org/packages/nguyenanhung/number-helper) [![Latest Unstable Version](http://poser.pugx.org/nguyenanhung/number-helper/v/unstable)](https://packagist.org/packages/nguyenanhung/number-helper) [![License](http://poser.pugx.org/nguyenanhung/number-helper/license)](https://packagist.org/packages/nguyenanhung/number-helper) [![PHP Version Require](http://poser.pugx.org/nguyenanhung/number-helper/require/php)](https://packagist.org/packages/nguyenanhung/number-helper)
+[![Latest Stable Version](https://img.shields.io/packagist/v/nguyenanhung/number-helper.svg?style=flat-square)](https://packagist.org/packages/nguyenanhung/number-helper)
+[![Total Downloads](https://img.shields.io/packagist/dt/nguyenanhung/number-helper.svg?style=flat-square)](https://packagist.org/packages/nguyenanhung/number-helper)
+[![Daily Downloads](https://img.shields.io/packagist/dd/nguyenanhung/number-helper.svg?style=flat-square)](https://packagist.org/packages/nguyenanhung/number-helper)
+[![Monthly Downloads](https://img.shields.io/packagist/dm/nguyenanhung/number-helper.svg?style=flat-square)](https://packagist.org/packages/nguyenanhung/number-helper)
+[![License](https://img.shields.io/packagist/l/nguyenanhung/number-helper.svg?style=flat-square)](https://packagist.org/packages/nguyenanhung/number-helper)
+[![PHP Version Require](https://img.shields.io/packagist/dependency-v/nguyenanhung/number-helper/php)](https://packagist.org/packages/nguyenanhung/number-helper)
 
 # Number Helper
 
